@@ -46,11 +46,21 @@ const About = () => (
     <section className="container py-24 grid lg:grid-cols-2 gap-14 items-center">
       <div className="relative">
         <div className="rounded-[2rem] overflow-hidden shadow-elegant">
-          <img src={founder} alt="Founder of Capture Emotions receiving photography award" className="w-full h-auto object-cover" />
+          <img src={founder} alt="Vishwas Gulati — Founder of Capture Emotions" className="w-full h-auto object-cover" />
         </div>
         <div className="absolute -bottom-6 -right-4 md:-right-10 bg-background rounded-2xl shadow-card p-5 max-w-[240px]">
           <div className="text-xs text-gold tracking-widest uppercase mb-1">Award Winning</div>
           <div className="font-display text-base leading-snug">Best Photography Company of the Year 2024</div>
+        </div>
+        <div className="mt-10 bg-secondary/40 rounded-3xl p-6 md:p-7">
+          <div className="text-xs tracking-[0.3em] uppercase text-gold font-medium mb-2">About the Founder</div>
+          <h3 className="font-display text-2xl md:text-3xl leading-tight">Vishwas Gulati</h3>
+          <p className="text-sm text-muted-foreground mt-1 italic">Award winning Photographer &amp; Cinematographer</p>
+          <ul className="mt-4 space-y-1.5 text-sm text-foreground">
+            <li>• Young Entrepreneur</li>
+            <li>• Director — Capture Emotions</li>
+            <li>• Director — Studio One Photographer Private Limited</li>
+          </ul>
         </div>
       </div>
       <div>
@@ -125,6 +135,25 @@ const About = () => (
               <div className="text-sm text-muted-foreground">{m.d}</div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* AWARD WINNING COMPANY */}
+    <section className="container pb-24">
+      <div className="relative bg-foreground text-background rounded-[2.5rem] p-10 md:p-16 overflow-hidden">
+        <div className="absolute -top-24 -right-24 w-80 h-80 bg-gradient-gold rounded-full opacity-20 blur-3xl" />
+        <div className="relative grid md:grid-cols-[auto,1fr] items-center gap-8">
+          <div className="w-24 h-24 rounded-3xl bg-gradient-gold flex items-center justify-center shadow-glow shrink-0">
+            <Award className="w-10 h-10 text-primary-foreground" />
+          </div>
+          <div>
+            <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">Recognised Excellence</span>
+            <h3 className="font-display text-3xl md:text-4xl mt-2 mb-3">Award Winning Company</h3>
+            <p className="text-background/70 leading-relaxed max-w-2xl">
+              Honoured as <span className="text-gold font-semibold">Best Photography Company of the Year 2024</span> — a recognition of eight years of craft, care and cinematic storytelling for clients across India.
+            </p>
+          </div>
         </div>
       </div>
     </section>

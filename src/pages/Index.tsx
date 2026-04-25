@@ -56,7 +56,7 @@ const Index = () => {
               </div>
               <div className="h-8 w-px bg-border" />
               <div className="text-xs text-muted-foreground">
-                <span className="font-semibold text-foreground">500+</span> happy couples
+                <span className="font-semibold text-foreground">50,000+</span> happy clients
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ const Index = () => {
               </div>
               <div>
                 <div className="text-xs text-muted-foreground">Trusted by</div>
-                <div className="text-sm font-semibold">500+ Clients</div>
+                <div className="text-sm font-semibold">50,000+ Clients</div>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ const Index = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { Icon: Star, label: "4.8 Google Rating", value: "146 Reviews" },
-            { Icon: Users, label: "Happy Clients", value: "500+" },
+            { Icon: Users, label: "Happy Clients", value: "50,000+" },
             { Icon: Clock, label: "Available", value: "24 / 7" },
             { Icon: Award, label: "Years of Craft", value: "8+ Years" },
           ].map(({ Icon, label, value }) => (
