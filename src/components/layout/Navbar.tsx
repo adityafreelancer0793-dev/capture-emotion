@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
@@ -38,7 +39,7 @@ const Navbar = () => {
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg font-semibold">Capture Emotions</div>
-            <div className="text-[10px] tracking-[0.2em] text-muted-foreground uppercase">Mumbai Photography</div>
+            <div className="text-[10px] tracking-[0.2em] text-muted-foreground uppercase">Pan India Production House</div>
           </div>
         </Link>
 
