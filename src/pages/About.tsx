@@ -138,6 +138,25 @@ const About = () => (
         </div>
       </div>
     </section>
+
+    {/* AWARD WINNING COMPANY */}
+    <section className="container pb-24">
+      <div className="relative bg-foreground text-background rounded-[2.5rem] p-10 md:p-16 overflow-hidden">
+        <div className="absolute -top-24 -right-24 w-80 h-80 bg-gradient-gold rounded-full opacity-20 blur-3xl" />
+        <div className="relative grid md:grid-cols-[auto,1fr] items-center gap-8">
+          <div className="w-24 h-24 rounded-3xl bg-gradient-gold flex items-center justify-center shadow-glow shrink-0">
+            <Award className="w-10 h-10 text-primary-foreground" />
+          </div>
+          <div>
+            <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">Recognised Excellence</span>
+            <h3 className="font-display text-3xl md:text-4xl mt-2 mb-3">Award Winning Company</h3>
+            <p className="text-background/70 leading-relaxed max-w-2xl">
+              Honoured as <span className="text-gold font-semibold">Best Photography Company of the Year 2024</span> — a recognition of eight years of craft, care and cinematic storytelling for clients across India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </>
 );
 
