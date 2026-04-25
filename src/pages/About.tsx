@@ -46,11 +46,21 @@ const About = () => (
     <section className="container py-24 grid lg:grid-cols-2 gap-14 items-center">
       <div className="relative">
         <div className="rounded-[2rem] overflow-hidden shadow-elegant">
-          <img src={founder} alt="Founder of Capture Emotions receiving photography award" className="w-full h-auto object-cover" />
+          <img src={founder} alt="Vishwas Gulati — Founder of Capture Emotions" className="w-full h-auto object-cover" />
         </div>
         <div className="absolute -bottom-6 -right-4 md:-right-10 bg-background rounded-2xl shadow-card p-5 max-w-[240px]">
           <div className="text-xs text-gold tracking-widest uppercase mb-1">Award Winning</div>
           <div className="font-display text-base leading-snug">Best Photography Company of the Year 2024</div>
+        </div>
+        <div className="mt-10 bg-secondary/40 rounded-3xl p-6 md:p-7">
+          <div className="text-xs tracking-[0.3em] uppercase text-gold font-medium mb-2">About the Founder</div>
+          <h3 className="font-display text-2xl md:text-3xl leading-tight">Vishwas Gulati</h3>
+          <p className="text-sm text-muted-foreground mt-1 italic">Award winning Photographer &amp; Cinematographer</p>
+          <ul className="mt-4 space-y-1.5 text-sm text-foreground">
+            <li>• Young Entrepreneur</li>
+            <li>• Director — Capture Emotions</li>
+            <li>• Director — Studio One Photographer Private Limited</li>
+          </ul>
         </div>
       </div>
       <div>
