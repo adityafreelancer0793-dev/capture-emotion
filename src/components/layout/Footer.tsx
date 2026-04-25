@@ -59,7 +59,17 @@ const Footer = () => (
     <div className="border-t border-border">
       <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
         <p>© {new Date().getFullYear()} Capture Emotions. All rights reserved.</p>
-        <p>Premium Photography Studio · Mumbai, Maharashtra</p>
+        <p>
+          Made by{" "}
+          <a
+            href="https://wa.me/919337166103"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-foreground hover:text-gold transition-smooth"
+          >
+            Aditya
+          </a>
+        </p>
       </div>
     </div>
   </footer>
