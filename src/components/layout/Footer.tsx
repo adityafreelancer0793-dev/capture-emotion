@@ -16,9 +16,9 @@ const Footer = () => (
         </p>
         <div className="flex gap-3 mt-5">
           {[
-            { Icon: Instagram, href: "#" },
+            { Icon: Instagram, href: "https://www.instagram.com/captureemotions._?igsh=MWp2OHlhY3lmdjc5dQ==" },
             { Icon: Facebook, href: "#" },
-            { Icon: Youtube, href: "#" },
+            { Icon: Youtube, href: "https://youtube.com/@captureemotions?si=aJKs10l4EGoI_MkZ" },
             { Icon: MessageCircle, href: "https://wa.me/919372194847" },
           ].map(({ Icon, href }, i) => (
             <a key={i} href={href} target="_blank" rel="noreferrer"
@@ -32,7 +32,7 @@ const Footer = () => (
       <div>
         <h4 className="font-display text-base mb-4">Quick Links</h4>
         <ul className="space-y-2 text-sm text-muted-foreground">
-          {[["Home","/"],["About","/about"],["Portfolio","/portfolio"],["Reviews","/reviews"],["Contact","/contact"]].map(([l,h]) => (
+          {[["Home","/"],["About","/about"],["Services","/services"],["Portfolio","/portfolio"],["Reviews","/reviews"],["Contact","/contact"]].map(([l,h]) => (
             <li key={h}><Link to={h} className="hover:text-foreground transition-smooth">{l}</Link></li>
           ))}
         </ul>
