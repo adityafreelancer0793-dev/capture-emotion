@@ -4,83 +4,48 @@ import {
   Building2, Users, Image as ImageIcon, PartyPopper, Film, Ribbon,
   Home, Factory, Store, Wine, Heart, Cake, Gift, Baby, KeyRound,
   Diamond, Camera, Flame, Calendar, Sofa, Utensils, ArrowRight,
+  Music, Sunrise,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 
-interface Group {
+interface Service {
+  Icon: typeof Megaphone;
   title: string;
-  tagline: string;
-  items: { Icon: typeof Megaphone; label: string }[];
+  description: string;
 }
 
-const groups: Group[] = [
-  {
-    title: "Commercial & Brand",
-    tagline: "Ad films, fashion and content built for brands that want to stand out.",
-    items: [
-      { Icon: Megaphone, label: "Ads" },
-      { Icon: Sparkles, label: "Fashion" },
-      { Icon: Video, label: "Promotional Content" },
-      { Icon: Share2, label: "Social Media Reels" },
-      { Icon: MonitorPlay, label: "Digital Media Content" },
-      { Icon: Package, label: "Product Shoots for E-commerce & Websites" },
-    ],
-  },
-  {
-    title: "Corporate & Events",
-    tagline: "Polished coverage for companies, exhibitions and milestone moments.",
-    items: [
-      { Icon: Building2, label: "Corporate Events" },
-      { Icon: Users, label: "Annual Meet-ups" },
-      { Icon: ImageIcon, label: "Exhibition Shoots" },
-      { Icon: PartyPopper, label: "Celebration Events" },
-      { Icon: Film, label: "Premieres" },
-      { Icon: Ribbon, label: "Inaugurations" },
-    ],
-  },
-  {
-    title: "Real Estate & Spaces",
-    tagline: "Architectural, interior and ambience shoots that sell the experience.",
-    items: [
-      { Icon: Home, label: "Real Estate" },
-      { Icon: Factory, label: "Plant & Factory Shoots" },
-      { Icon: Store, label: "Shops & Commercial Compounds" },
-      { Icon: Wine, label: "Pubs, Bars, Restaurants & Salons" },
-      { Icon: Sofa, label: "Interior & Exterior Shoots" },
-      { Icon: Camera, label: "Ambience Shoots" },
-    ],
-  },
-  {
-    title: "Personal Celebrations",
-    tagline: "Heart-led photography for the moments that matter most.",
-    items: [
-      { Icon: Heart, label: "Weddings" },
-      { Icon: Cake, label: "Birthdays" },
-      { Icon: Gift, label: "Anniversaries" },
-      { Icon: Baby, label: "Baby Showers" },
-      { Icon: KeyRound, label: "House Warming" },
-      { Icon: Diamond, label: "Engagements" },
-      { Icon: Camera, label: "Pre-Wedding Events" },
-    ],
-  },
-  {
-    title: "Cultural & Festivals",
-    tagline: "Capturing rituals, traditions and the colour of every celebration.",
-    items: [
-      { Icon: Flame, label: "Religious & Cultural Shoots" },
-      { Icon: Calendar, label: "All Festival Events" },
-      { Icon: Sparkles, label: "Holi, Diwali, Christmas & New Year" },
-      { Icon: PartyPopper, label: "Ganpati & many more" },
-    ],
-  },
-  {
-    title: "Food & Beverage",
-    tagline: "Crave-worthy F&B photography for restaurants and brands.",
-    items: [
-      { Icon: Utensils, label: "F & B Shoots" },
-    ],
-  },
+const services: Service[] = [
+  { Icon: Megaphone, title: "Ads", description: "High-impact advertising films and stills built to convert." },
+  { Icon: Sparkles, title: "Fashion", description: "Editorial fashion shoots with mood, movement and style." },
+  { Icon: Video, title: "Promotional Content", description: "Brand promos crafted to drive awareness and engagement." },
+  { Icon: Share2, title: "Social Media Reels", description: "Scroll-stopping reels designed for Instagram and beyond." },
+  { Icon: MonitorPlay, title: "Digital Media Content", description: "Versatile content tailored for every digital platform." },
+  { Icon: Package, title: "Product Shoots for E-commerce & Websites", description: "Clean, conversion-focused product photography." },
+  { Icon: Building2, title: "Corporate Events", description: "Polished coverage of conferences, launches and summits." },
+  { Icon: Users, title: "Annual Meet-ups", description: "Documenting your company culture and milestones." },
+  { Icon: ImageIcon, title: "Exhibition Shoots", description: "Trade show and exhibition coverage that tells your brand story." },
+  { Icon: PartyPopper, title: "Celebration Events", description: "Capturing the joy of every kind of celebration." },
+  { Icon: Film, title: "Premieres", description: "Red-carpet ready coverage for premieres and launches." },
+  { Icon: Ribbon, title: "Inaugurations", description: "Memorable visuals for openings and ribbon-cutting moments." },
+  { Icon: Home, title: "Real Estate", description: "Architectural photography that sells the space." },
+  { Icon: Factory, title: "Plant & Factory Shoots", description: "Industrial photography showcasing scale and capability." },
+  { Icon: Store, title: "Shops & Commercial Compounds", description: "Retail and commercial space photography." },
+  { Icon: Wine, title: "Pubs, Bars, Restaurants & Salons", description: "Atmospheric shoots that capture the vibe of your venue." },
+  { Icon: Heart, title: "Weddings", description: "Cinematic, heart-led wedding photography and films." },
+  { Icon: Cake, title: "Birthdays", description: "Joyful birthday photography for every age." },
+  { Icon: Gift, title: "Anniversaries", description: "Intimate anniversary shoots that honour your story." },
+  { Icon: Baby, title: "Baby Showers", description: "Soft, celebratory shoots for new beginnings." },
+  { Icon: KeyRound, title: "House Warming", description: "Capturing the warmth of your new home." },
+  { Icon: Diamond, title: "Engagements", description: "Romantic engagement photography to remember forever." },
+  { Icon: Sunrise, title: "Pre-Wedding Events", description: "Dreamy pre-wedding shoots in stunning locations." },
+  { Icon: Flame, title: "Religious & Cultural Shoots", description: "Respectful coverage of rituals and traditions." },
+  { Icon: Calendar, title: "All Festival Events", description: "Vibrant festival photography full of colour and life." },
+  { Icon: Music, title: "Holi, Diwali, Christmas & New Year", description: "Festive shoots that capture the spirit of the season." },
+  { Icon: PartyPopper, title: "Ganpati & many more", description: "Devotional and cultural festival coverage." },
+  { Icon: Sofa, title: "Interior & Exterior Shoots", description: "Stunning interior and exterior architectural photography." },
+  { Icon: Camera, title: "Ambience Shoots", description: "Mood-driven shoots that capture atmosphere and feel." },
+  { Icon: Utensils, title: "F & B Shoots", description: "Crave-worthy food and beverage photography." },
 ];
 
 const Services = () => (
@@ -101,29 +66,26 @@ const Services = () => (
       </div>
     </section>
 
-    {/* GROUPS */}
-    <section className="container py-16 space-y-12">
-      {groups.map((g, gi) => (
-        <div key={g.title} className="animate-fade-up" style={{ animationDelay: `${gi * 80}ms` }}>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
-            <div>
-              <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">0{gi + 1}</span>
-              <h2 className="font-display text-3xl md:text-4xl mt-2">{g.title}</h2>
+    {/* SERVICES GRID */}
+    <section className="container py-16">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map(({ Icon, title, description }, i) => (
+          <div
+            key={title}
+            className="group bg-background border border-border rounded-3xl p-7 hover-lift animate-fade-up flex flex-col"
+            style={{ animationDelay: `${i * 30}ms` }}
+          >
+            <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mb-5 group-hover:bg-gradient-gold transition-luxury">
+              <Icon className="w-6 h-6 text-gold group-hover:text-background transition-smooth" />
             </div>
-            <p className="text-muted-foreground max-w-md md:text-right">{g.tagline}</p>
+            <h3 className="font-display text-xl mb-2 leading-snug">{title}</h3>
+            <p className="text-sm text-muted-foreground mb-6 flex-1">{description}</p>
+            <Button asChild variant="luxury" size="sm" className="self-start">
+              <Link to="/contact">Enquire Now <ArrowRight className="w-3.5 h-3.5" /></Link>
+            </Button>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {g.items.map(({ Icon, label }) => (
-              <div key={label} className="bg-background border border-border rounded-3xl p-5 flex items-center gap-4 hover-lift">
-                <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center shrink-0">
-                  <Icon className="w-5 h-5 text-gold" />
-                </div>
-                <div className="font-medium text-sm">{label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
 
     {/* CTA */}

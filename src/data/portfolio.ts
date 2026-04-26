@@ -23,12 +23,12 @@ import portfolio23 from "@/assets/portfolio-23.jpg";
 import portfolio24 from "@/assets/portfolio-24.jpg";
 import portfolio25 from "@/assets/portfolio-25.jpg";
 
-export type Category = "All Pics" | "Portrait" | "Ads Work" | "Events" | "Products" | "Wedding";
+export type Category = "All" | "Portrait" | "Events" | "Products" | "Wedding";
 
 export interface PortfolioItem {
   src: string;
   alt: string;
-  category: Exclude<Category, "All Pics" | "Ads Work">;
+  category: Exclude<Category, "All">;
 }
 
 export const portfolioItems: PortfolioItem[] = [
@@ -58,7 +58,19 @@ export const portfolioItems: PortfolioItem[] = [
   { src: portfolio25, alt: "Premium leather formal shoes product shoot", category: "Products" },
 ];
 
-export const categories: Category[] = ["All Pics", "Portrait", "Ads Work", "Events", "Products", "Wedding"];
+export const categories: Category[] = ["All", "Portrait", "Events", "Products", "Wedding"];
+
+/**
+ * Auto-categorize an item based on filename / alt / tag hints.
+ * Used for images fetched dynamically from external sources.
+ */
+export const autoCategorize = (text: string): Exclude<Category, "All"> => {
+  const t = text.toLowerCase();
+  if (/(wedding|bride|groom|bridal|haldi|mehendi|sangeet|baraat|nikah|pre.?wedding|couple|ritual|saat phere|varmala)/.test(t)) return "Wedding";
+  if (/(event|concert|dj|party|festival|stage|crowd|celebration|inaugurat|premiere|exhibition|launch|annual|conference|gathering|live)/.test(t)) return "Events";
+  if (/(product|bottle|ring|jewel|jewellery|jewelry|shoe|sandal|food|dish|pizza|chocolate|cream|cosmetic|perfume|watch|bag|packshot|ecom|e.?commerce)/.test(t)) return "Products";
+  return "Portrait";
+};
 
 export interface AdVideo {
   id: string;
@@ -66,7 +78,6 @@ export interface AdVideo {
   url: string;
 }
 
-// Extract YouTube ID for thumbnail
 const ytId = (url: string) => {
   const m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))([\w-]{11})/);
   return m ? m[1] : "";
