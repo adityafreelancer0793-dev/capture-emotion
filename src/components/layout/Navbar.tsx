@@ -2,6 +2,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -34,8 +35,8 @@ const Navbar = () => {
     >
       <nav className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-glow transition-luxury group-hover:rotate-6">
-            <span className="text-primary-foreground font-display font-bold text-lg">C</span>
+          <div className="w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center shadow-glow overflow-hidden transition-luxury group-hover:rotate-6">
+            <img src={logo} alt="Capture Emotions logo" className="w-full h-full object-contain" />
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg font-semibold">Capture Emotions</div>
