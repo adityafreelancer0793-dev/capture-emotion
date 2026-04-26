@@ -180,6 +180,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* INTRO VIDEO */}
+      <section className="container pb-8">
+        <div className="text-center max-w-2xl mx-auto mb-8">
+          <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">Studio Intro</span>
+          <h2 className="font-display text-4xl md:text-5xl mt-3">A glimpse inside our world</h2>
+        </div>
+        <div className="rounded-[2rem] overflow-hidden shadow-elegant bg-foreground aspect-video w-full max-w-5xl mx-auto">
+          <iframe
+            src="https://drive.google.com/file/d/1gaoeH4HS7QKQyjFOqkDrkeqcLr5wXMrX/preview"
+            className="w-full h-full"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            title="Capture Emotions — Studio Intro"
+          />
+        </div>
+      </section>
+
       {/* CTA BANNER */}
       <section className="container pb-24">
         <div className="bg-foreground text-background rounded-[2.5rem] p-10 md:p-16 text-center relative overflow-hidden">
