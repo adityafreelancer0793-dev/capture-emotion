@@ -118,7 +118,7 @@ const Portfolio = () => {
           <h2 className="font-display text-4xl md:text-5xl mt-3">From our set to your story</h2>
           <p className="mt-4 text-muted-foreground">A peek into the craft, energy and emotion behind every Capture Emotions production.</p>
         </div>
-        <div className="rounded-[2rem] overflow-hidden shadow-elegant bg-foreground aspect-video max-w-4xl mx-auto">
+        <div className="rounded-[2rem] overflow-hidden shadow-elegant bg-foreground aspect-video w-full">
           <iframe
             src="https://drive.google.com/file/d/1IfRLSrekJVS1CXzp9pazsVZVtwbs3KI0/preview"
             className="w-full h-full"

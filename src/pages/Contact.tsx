@@ -42,6 +42,7 @@ const Contact = () => {
           {[
             { Icon: Phone, label: "Call Us", value: "093721 94847", href: "tel:09372194847" },
             { Icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", href: "https://wa.me/919372194847" },
+            { Icon: Mail, label: "Email", value: "Capturestudio1506@gmail.com", href: "mailto:Capturestudio1506@gmail.com" },
             { Icon: MapPin, label: "Studio", value: "Link Plaza, 92, Andheri West, Mumbai 400102" },
             { Icon: Clock, label: "Working Hours", value: "Open 24 hours · 7 days" },
           ].map(({ Icon, label, value, href }) => {
