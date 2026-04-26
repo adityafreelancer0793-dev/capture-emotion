@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-import { Star, ArrowRight, Camera, Heart, Sparkles, Users, Award, Clock, ChevronDown } from "lucide-react";
+import { Star, ArrowRight, Camera, Heart, Sparkles, Users, Award, Clock, ChevronDown, Film, ShoppingBag, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import { portfolioItems } from "@/data/portfolio";
+import { portfolioItems, homepageRecent } from "@/data/portfolio";
 
 const services = [
+  { Icon: Film, title: "Films & Ad Shoot", desc: "Cinematic ad films & branded content" },
+  { Icon: ShoppingBag, title: "Fashion & Products", desc: "Editorial fashion & e-commerce shoots" },
+  { Icon: Sparkles, title: "Events", desc: "Premieres, parties & cultural events" },
+  { Icon: Building2, title: "Corporate Shoots", desc: "Conferences, annual meets & exhibitions" },
   { Icon: Heart, title: "Wedding", desc: "Timeless wedding stories" },
-  { Icon: Camera, title: "Portrait", desc: "Editorial-grade portraits" },
-  { Icon: Sparkles, title: "Events", desc: "Cinematic event coverage" },
-  { Icon: Award, title: "Products", desc: "Premium commercial shoots" },
 ];
 
 const Index = () => {
-  const lastTwo = portfolioItems.slice(-2);
+  const lastTwo = homepageRecent;
 
   return (
     <>
@@ -110,7 +111,7 @@ const Index = () => {
           <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">What We Do</span>
           <h2 className="font-display text-4xl md:text-5xl mt-3">A studio built around your story</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {services.map(({ Icon, title, desc }) => (
             <div key={title} className="bg-background border border-border rounded-3xl p-7 hover-lift cursor-pointer group">
               <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center mb-5 group-hover:bg-foreground group-hover:text-background transition-smooth">
@@ -176,6 +177,23 @@ const Index = () => {
               <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-smooth" />
             </Link>
           </Button>
+        </div>
+      </section>
+
+      {/* INTRO VIDEO */}
+      <section className="container pb-8">
+        <div className="text-center max-w-2xl mx-auto mb-8">
+          <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">Studio Intro</span>
+          <h2 className="font-display text-4xl md:text-5xl mt-3">A glimpse inside our world</h2>
+        </div>
+        <div className="rounded-[2rem] overflow-hidden shadow-elegant bg-foreground aspect-video w-full max-w-5xl mx-auto">
+          <iframe
+            src="https://drive.google.com/file/d/1gaoeH4HS7QKQyjFOqkDrkeqcLr5wXMrX/preview"
+            className="w-full h-full"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            title="Capture Emotions — Studio Intro"
+          />
         </div>
       </section>
 
