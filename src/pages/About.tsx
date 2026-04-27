@@ -16,10 +16,6 @@ const About = () => (
       <div className="container text-center max-w-3xl mx-auto animate-fade-up">
         <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">Our Story</span>
         <h1 className="font-display text-5xl md:text-6xl mt-3 leading-tight">A studio built on emotion, craft & trust</h1>
-        <p className="mt-5 text-base md:text-lg text-foreground font-medium">
-          Capture Emotions <span className="text-muted-foreground font-normal">(An Initiative by Studio One Photography Private Limited)</span>
-        </p>
-        <p className="mt-2 text-sm tracking-[0.2em] uppercase text-gold">Professionally</p>
         <p className="mt-6 text-lg text-muted-foreground">
           Capture Emotions is a Mumbai-based photography studio creating cinematic visuals for weddings, portraits, events and brands across India.
         </p>
@@ -159,6 +155,21 @@ const About = () => (
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    {/* COMPANY SIGNATURE */}
+    <section className="container pb-20">
+      <div className="bg-secondary/40 rounded-[2rem] py-10 px-6 md:py-14 md:px-12 text-center max-w-4xl mx-auto">
+        <h3 className="font-display text-2xl sm:text-3xl md:text-4xl leading-tight">
+          Capture Emotions
+        </h3>
+        <p className="mt-3 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+          An Initiative by <span className="text-foreground font-medium">Studio One Photography Private Limited</span>
+        </p>
+        <p className="mt-4 text-xs sm:text-sm tracking-[0.3em] uppercase text-gold font-medium">
+          Professionally
+        </p>
       </div>
     </section>
   </>
