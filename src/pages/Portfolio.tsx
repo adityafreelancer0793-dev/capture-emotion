@@ -152,24 +152,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* BEHIND THE SCENES */}
-      <section className="container pb-20">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">Behind the Scenes</span>
-          <h2 className="font-display text-4xl md:text-5xl mt-3">From our set to your story</h2>
-          <p className="mt-4 text-muted-foreground">A peek into the craft, energy and emotion behind every Capture Emotions production.</p>
-        </div>
-        <div className="rounded-[2rem] overflow-hidden shadow-elegant bg-foreground aspect-video w-full">
-          <iframe
-            src="https://drive.google.com/file/d/1IfRLSrekJVS1CXzp9pazsVZVtwbs3KI0/preview"
-            className="w-full h-full"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            title="Behind the scenes — Capture Emotions"
-          />
-        </div>
-      </section>
-
       {/* FEATURED */}
       <section className="container pb-24">
         <div className="bg-foreground text-background rounded-[2.5rem] p-10 md:p-16 text-center">
