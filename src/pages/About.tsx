@@ -160,16 +160,16 @@ const About = () => (
 
     {/* COMPANY SIGNATURE */}
     <section className="container pb-20">
-      <div className="bg-secondary/40 rounded-[2rem] py-10 px-6 md:py-14 md:px-12 text-center max-w-4xl mx-auto">
-        <h3 className="font-display text-2xl sm:text-3xl md:text-4xl leading-tight">
-          Capture Emotions
-        </h3>
-        <p className="mt-3 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-          An Initiative by <span className="text-foreground font-medium">Studio One Photography Private Limited</span>
-        </p>
-        <p className="mt-4 text-xs sm:text-sm tracking-[0.3em] uppercase text-gold font-medium">
-          Professionally
-        </p>
+      <div className="relative bg-foreground text-background rounded-[2rem] py-10 px-6 md:py-14 md:px-12 text-center max-w-4xl mx-auto overflow-hidden shadow-elegant">
+        <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-gold rounded-full opacity-20 blur-3xl" />
+        <div className="relative">
+          <h3 className="font-display text-2xl sm:text-3xl md:text-4xl leading-tight">
+            Capture Emotions
+          </h3>
+          <p className="mt-3 text-sm sm:text-base md:text-lg text-background/70 leading-relaxed">
+            An Initiative by <span className="text-gold font-medium">Studio One Photography Private Limited</span>
+          </p>
+        </div>
       </div>
     </section>
   </>
