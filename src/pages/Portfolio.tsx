@@ -111,6 +111,47 @@ const Portfolio = () => {
         )}
       </section>
 
+      {/* AD FILMS */}
+      <section className="container pb-20">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <span className="text-xs tracking-[0.3em] uppercase text-gold font-medium">Ad Films</span>
+          <h2 className="font-display text-4xl md:text-5xl mt-3">Our Ad Work</h2>
+          <p className="mt-4 text-muted-foreground">A showcase of cinematic ad films crafted by Capture Emotions.</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {adVideos.map((v, i) => (
+            <div
+              key={v.id}
+              className="group bg-background rounded-3xl overflow-hidden shadow-card hover-lift animate-fade-up flex flex-col"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <a href={v.url} target="_blank" rel="noreferrer" className="relative block aspect-video overflow-hidden">
+                <img
+                  src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`}
+                  alt={v.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-luxury group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/30 transition-smooth flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-background/95 flex items-center justify-center shadow-elegant group-hover:scale-110 transition-luxury">
+                    <Play className="w-6 h-6 text-foreground ml-1" fill="currentColor" />
+                  </div>
+                </div>
+              </a>
+              <div className="p-5 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-[10px] tracking-[0.3em] uppercase text-gold">Ad Film</div>
+                  <div className="font-display text-base mt-1">{v.title}</div>
+                </div>
+                <Button asChild variant="luxury" size="sm">
+                  <a href={v.url} target="_blank" rel="noreferrer">View</a>
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* BEHIND THE SCENES */}
       <section className="container pb-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
